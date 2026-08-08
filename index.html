@@ -20,8 +20,7 @@
       <span class="logo-text">A<span class="logo-plus">+</span> Nail Spa</span>
     </a>
     <nav class="nav-links" id="navLinks">
-      <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#services">Menu</a>
       <a href="#gallery">Gallery</a>
       <a href="#testimonials">Reviews</a>
       <a href="#contact">Contact</a>
@@ -44,7 +43,7 @@
       <p class="hero-subtitle">A minimal, relaxing space with professional-grade nail &amp; spa services. Your hands and feet deserve the very best care.</p>
       <div class="hero-actions">
         <a href="tel:+19406125346" class="btn btn-primary">Book Now</a>
-        <a href="#services" class="btn btn-outline">View Services</a>
+        <a href="#services" class="btn btn-outline">View Menu</a>
       </div>
     </div>
     <div class="hero-visual reveal">
@@ -85,44 +84,129 @@
     </div>
   </section>
 
-  <section class="feature-section" id="services">
+  <section class="menu-section" id="services">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow">Our Services</span>
-        <h2 class="section-title">Your hands. <span class="grad-text">Our full attention.</span></h2>
-        <p class="section-desc">From classic manicures to deep spa therapy — every service is performed with care by our experienced technicians.</p>
+        <span class="eyebrow">Full Menu</span>
+        <h2 class="section-title">Our <span class="grad-text">menu</span> &amp; pricing</h2>
+        <p class="section-desc">Transparent pricing for every service — no hidden fees. Browse by category below.</p>
       </div>
-      <div class="feature-grid">
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i data-lucide="hand"></i></div>
-          <h3>Manicure &amp; Gel</h3>
-          <p>Professional nail care, long-lasting gel polish, custom shaping on request.</p>
+
+      <div class="menu-tabs reveal" id="menuTabs" role="tablist">
+        <button class="menu-tab active" data-target="dip" role="tab" aria-selected="true">Dip</button>
+        <button class="menu-tab" data-target="acrylic" role="tab" aria-selected="false">Acrylic</button>
+        <button class="menu-tab" data-target="pedicure" role="tab" aria-selected="false">Pedicure</button>
+        <button class="menu-tab" data-target="manicure" role="tab" aria-selected="false">Manicure</button>
+        <button class="menu-tab" data-target="gelx" role="tab" aria-selected="false">Gel X</button>
+        <button class="menu-tab" data-target="kid" role="tab" aria-selected="false">Kid</button>
+        <button class="menu-tab" data-target="waxing" role="tab" aria-selected="false">Waxing</button>
+        <button class="menu-tab" data-target="addon" role="tab" aria-selected="false">Add-On</button>
+      </div>
+
+      <div class="menu-panels reveal">
+
+        <div class="menu-panel active" id="panel-dip" role="tabpanel">
+          <div class="menu-list">
+            <div class="menu-row"><span class="menu-name">Solar Dip</span><span class="menu-price">$40</span></div>
+            <div class="menu-row"><span class="menu-name">Dip + <span class="menu-note">(Add Paraffin Wax) · Must try</span></span><span class="menu-price">$45</span></div>
+            <div class="menu-row"><span class="menu-name">French Dip</span><span class="menu-price">$50</span></div>
+            <div class="menu-row"><span class="menu-name">Ombre / Chrome Dip</span><span class="menu-price">$55</span></div>
+            <div class="menu-row"><span class="menu-name">Cat Eyes Dip</span><span class="menu-price">$65</span></div>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i data-lucide="footprints"></i></div>
-          <h3>Pedicure Deluxe</h3>
-          <p>Herbal foot soak, exfoliation, and a relaxing foot massage.</p>
+
+        <div class="menu-panel" id="panel-acrylic" role="tabpanel">
+          <div class="menu-list">
+            <div class="menu-row-head"><span></span><span>New Set</span><span>Fill</span></div>
+            <div class="menu-row menu-row-dual"><span class="menu-name">Full Set</span><span class="menu-price">$45</span><span class="menu-price">$35</span></div>
+            <div class="menu-row menu-row-dual"><span class="menu-name">P&amp;W Full Set</span><span class="menu-price">$55</span><span class="menu-price">$50</span></div>
+            <div class="menu-row menu-row-dual"><span class="menu-name">Color Powder</span><span class="menu-price">$50</span><span class="menu-price">$45</span></div>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i data-lucide="sparkles"></i></div>
-          <h3>Acrylic &amp; Nail Art</h3>
-          <p>Acrylic application, nail extensions, and custom nail art to match your style.</p>
+
+        <div class="menu-panel" id="panel-pedicure" role="tabpanel">
+          <div class="menu-list">
+            <div class="menu-row"><span class="menu-name">Deluxe Pedicure <span class="menu-note">(Paraffin wax add on)</span></span><span class="menu-price">$35</span></div>
+            <div class="menu-row"><span class="menu-name">A+ Pedicure <span class="menu-note">(Sugar scrub, Mud mask, Paraffin wax)</span></span><span class="menu-price">$45</span></div>
+            <div class="menu-row"><span class="menu-name">Organic Pedicure <span class="menu-note">(A+ Pedi + Fresh fruit, Hot stone) · Must try</span></span><span class="menu-price">$55</span></div>
+            <div class="menu-row"><span class="menu-name">Collagen Pedicure <span class="menu-note">(Organic Pedi + Shoulder massage, Collagen shock) · Must try</span></span><span class="menu-price">$65</span></div>
+            <div class="menu-row"><span class="menu-name">Plus All Day Pedicure <span class="menu-note">(Organic Pedi + Shoulder massage, Collagen shock, and 25-min massage) · Must try</span></span><span class="menu-price">$75</span></div>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i data-lucide="flower-2"></i></div>
-          <h3>Waxing</h3>
-          <p>Professional, gentle waxing that's safe for every skin type.</p>
+
+        <div class="menu-panel" id="panel-manicure" role="tabpanel">
+          <div class="menu-list">
+            <div class="menu-row"><span class="menu-name">Gel Manicure</span><span class="menu-price">$40</span></div>
+            <div class="menu-row"><span class="menu-name">Basic Manicure</span><span class="menu-price">$20</span></div>
+            <div class="menu-row"><span class="menu-name">A+ Manicure <span class="menu-note">(Sugar scrub, Mud mask and Paraffin wax)</span></span><span class="menu-price">$35</span></div>
+            <div class="menu-row"><span class="menu-name">Organic Manicure <span class="menu-note">(Fresh fruit, Sugar scrub, Mud mask, Paraffin wax and Massage with Hot stone)</span></span><span class="menu-price">$45</span></div>
+            <div class="menu-row"><span class="menu-name">Plus All Day Manicure</span><span class="menu-price">$55</span></div>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i data-lucide="heart-handshake"></i></div>
-          <h3>Massage &amp; Spa</h3>
-          <p>Full-body therapeutic massage to relieve stress and restore energy.</p>
+
+        <div class="menu-panel" id="panel-gelx" role="tabpanel">
+          <div class="menu-list">
+            <div class="menu-row"><span class="menu-name">Gel X <span class="menu-note">New Set</span></span><span class="menu-price">$65</span></div>
+            <div class="menu-row"><span class="menu-name">Gel X <span class="menu-note">Fill</span></span><span class="menu-price">$50</span></div>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i data-lucide="gem"></i></div>
-          <h3>Combo Packages</h3>
-          <p>Combine multiple services in one visit — save time and money.</p>
+
+        <div class="menu-panel" id="panel-kid" role="tabpanel">
+          <div class="menu-list">
+            <div class="menu-row-head"><span></span><span>Standard</span><span>W/ Gel</span></div>
+            <div class="menu-row menu-row-dual"><span class="menu-name">Kid Pedicure</span><span class="menu-price">$20</span><span class="menu-price">$35</span></div>
+            <div class="menu-row menu-row-dual"><span class="menu-name">Kid Manicure</span><span class="menu-price">$15</span><span class="menu-price">$30</span></div>
+            <div class="menu-row"><span class="menu-name">Kid Polish Change <span class="menu-note">(Hand / Toe)</span></span><span class="menu-price">$8</span></div>
+            <div class="menu-row"><span class="menu-name">Design</span><span class="menu-price">$5+</span></div>
+          </div>
         </div>
+
+        <div class="menu-panel" id="panel-waxing" role="tabpanel">
+          <div class="menu-list menu-list-compact">
+            <div class="menu-row"><span class="menu-name">Eyebrows</span><span class="menu-price">$12</span></div>
+            <div class="menu-row"><span class="menu-name">Tint</span><span class="menu-price">$15</span></div>
+            <div class="menu-row"><span class="menu-name">Lip</span><span class="menu-price">$8</span></div>
+            <div class="menu-row"><span class="menu-name">Chin</span><span class="menu-price">$10</span></div>
+            <div class="menu-row"><span class="menu-name">Sideburn</span><span class="menu-price">$15</span></div>
+            <div class="menu-row"><span class="menu-name">Neck</span><span class="menu-price">$15</span></div>
+            <div class="menu-row"><span class="menu-name">Underarms</span><span class="menu-price">$20+</span></div>
+            <div class="menu-row"><span class="menu-name">Chest</span><span class="menu-price">$30+</span></div>
+            <div class="menu-row"><span class="menu-name">Full Face</span><span class="menu-price">$35+</span></div>
+            <div class="menu-row"><span class="menu-name">Half Arms</span><span class="menu-price">$25+</span></div>
+            <div class="menu-row"><span class="menu-name">Full Arms</span><span class="menu-price">$40+</span></div>
+            <div class="menu-row"><span class="menu-name">Eyelash Tint</span><span class="menu-price">$25</span></div>
+            <div class="menu-row"><span class="menu-name">Half Legs</span><span class="menu-price">$40+</span></div>
+            <div class="menu-row"><span class="menu-name">Full Legs</span><span class="menu-price">$60+</span></div>
+            <div class="menu-row"><span class="menu-name">Bikini</span><span class="menu-price">$40+</span></div>
+            <div class="menu-row"><span class="menu-name">Back</span><span class="menu-price">$50+</span></div>
+            <div class="menu-row"><span class="menu-name">Brazilian</span><span class="menu-price">$70+</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="panel-addon" role="tabpanel">
+          <div class="menu-list menu-list-compact">
+            <div class="menu-row"><span class="menu-name">Nail Tip</span><span class="menu-price">$5</span></div>
+            <div class="menu-row"><span class="menu-name">Shape</span><span class="menu-price">$5</span></div>
+            <div class="menu-row"><span class="menu-name">Length</span><span class="menu-price">$5+</span></div>
+            <div class="menu-row"><span class="menu-name">French</span><span class="menu-price">$5+</span></div>
+            <div class="menu-row"><span class="menu-name">Cuticle Trim</span><span class="menu-price">$10</span></div>
+            <div class="menu-row"><span class="menu-name">Cut &amp; Shape</span><span class="menu-price">$10</span></div>
+            <div class="menu-row"><span class="menu-name">Collagen Mask</span><span class="menu-price">$10</span></div>
+            <div class="menu-row"><span class="menu-name">Paraffin Wax</span><span class="menu-price">$10</span></div>
+            <div class="menu-row"><span class="menu-name">Hot Stone</span><span class="menu-price">$5</span></div>
+            <div class="menu-row"><span class="menu-name">Extra Massage <span class="menu-note">(per minute)</span></span><span class="menu-price">$1.5</span></div>
+            <div class="menu-row"><span class="menu-name">Gel</span><span class="menu-price">$20</span></div>
+            <div class="menu-row"><span class="menu-name">Polish Change</span><span class="menu-price">$12</span></div>
+            <div class="menu-row"><span class="menu-name">Design</span><span class="menu-price">$8+</span></div>
+            <div class="menu-row"><span class="menu-name">Remove w/ Service</span><span class="menu-price">$5</span></div>
+            <div class="menu-row"><span class="menu-name">Remove w/out Service</span><span class="menu-price">$10</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="menu-cta reveal">
+        <a href="tel:+19406125346" class="btn btn-primary">Book Now</a>
       </div>
     </div>
   </section>
@@ -162,49 +246,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="pricing-section" id="pricing">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow">Pricing</span>
-        <h2 class="section-title">Transparent <span class="grad-text">pricing</span></h2>
-        <p class="section-desc">Fair prices for every service, with no hidden fees.</p>
-      </div>
-      <div class="pricing-grid">
-        <div class="price-card reveal">
-          <h3>Basic Manicure</h3>
-          <div class="price">$25</div>
-          <ul>
-            <li>Nail trim &amp; shape</li>
-            <li>Cuticle care</li>
-            <li>Standard polish</li>
-          </ul>
-          <a href="tel:+19406125346" class="btn btn-outline btn-block">Book Now</a>
-        </div>
-        <div class="price-card featured reveal">
-          <span class="price-badge">Most Popular</span>
-          <h3>Gel Deluxe</h3>
-          <div class="price">$45</div>
-          <ul>
-            <li>Everything in Basic</li>
-            <li>Long-lasting gel polish</li>
-            <li>10-min hand massage</li>
-          </ul>
-          <a href="tel:+19406125346" class="btn btn-primary btn-block">Book Now</a>
-        </div>
-        <div class="price-card reveal">
-          <h3>Spa Combo</h3>
-          <div class="price">$75</div>
-          <ul>
-            <li>Manicure + Pedicure</li>
-            <li>Exfoliation</li>
-            <li>20-min full-body massage</li>
-          </ul>
-          <a href="tel:+19406125346" class="btn btn-outline btn-block">Book Now</a>
         </div>
       </div>
     </div>
@@ -296,9 +337,9 @@
       <p><a href="tel:+19406125346">+1 940-612-5346</a></p>
     </div>
     <div class="footer-links">
-      <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#services">Menu</a>
       <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Reviews</a>
       <a href="#contact">Contact</a>
     </div>
   </div>

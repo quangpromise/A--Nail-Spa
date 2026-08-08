@@ -11,8 +11,24 @@ if (navToggle) {
   });
 }
 
+const menuTabs = document.querySelectorAll('.menu-tab');
+menuTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.target;
+    menuTabs.forEach((t) => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    document.querySelectorAll('.menu-panel').forEach((panel) => {
+      panel.classList.toggle('active', panel.id === `panel-${target}`);
+    });
+  });
+});
+
 const revealTargets = document.querySelectorAll(
-  '.reveal, .feature-card, .price-card, .gallery-item, .testimonial-card'
+  '.reveal, .gallery-item, .testimonial-card'
 );
 
 const observer = new IntersectionObserver(
