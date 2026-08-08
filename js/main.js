@@ -41,8 +41,34 @@ menuTabs.forEach((tab) => {
   });
 });
 
+const galleryTrack = document.getElementById('galleryTrack');
+const galleryPrev = document.getElementById('galleryPrev');
+const galleryNext = document.getElementById('galleryNext');
+const galleryCounter = document.getElementById('galleryCounter');
+if (galleryTrack) {
+  const slides = galleryTrack.querySelectorAll('.gallery-slide');
+  const total = slides.length;
+  let current = 0;
+
+  const updateGallery = () => {
+    galleryTrack.style.transform = `translateX(-${current * 100}%)`;
+    galleryCounter.textContent = `${current + 1} / ${total}`;
+    galleryPrev.disabled = current === 0;
+    galleryNext.disabled = current === total - 1;
+  };
+
+  galleryPrev.addEventListener('click', () => {
+    if (current > 0) { current -= 1; updateGallery(); }
+  });
+  galleryNext.addEventListener('click', () => {
+    if (current < total - 1) { current += 1; updateGallery(); }
+  });
+
+  updateGallery();
+}
+
 const revealTargets = document.querySelectorAll(
-  '.reveal, .gallery-item, .testimonial-card'
+  '.reveal, .testimonial-card'
 );
 
 const observer = new IntersectionObserver(
