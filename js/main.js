@@ -51,7 +51,7 @@ if (galleryTrack) {
   let current = 0;
 
   const updateGallery = () => {
-    galleryTrack.style.transform = `translateX(-${current * 100}%)`;
+    slides.forEach((slide, i) => slide.classList.toggle('active', i === current));
     galleryCounter.textContent = `${current + 1} / ${total}`;
     galleryPrev.disabled = current === 0;
     galleryNext.disabled = current === total - 1;

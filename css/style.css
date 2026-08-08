@@ -556,17 +556,20 @@ img { max-width: 100%; display: block; }
   padding: 0 64px;
 }
 .gallery-track {
-  display: flex;
-  overflow: hidden;
   border-radius: 4px;
-  transition: transform 450ms ease;
 }
 .gallery-slide {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  flex: 0 0 100%;
-  min-width: 100%;
+}
+.gallery-slide.active {
+  display: grid;
+  animation: gallerySlideFade 300ms ease;
+}
+@keyframes gallerySlideFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 .gallery-item {
   aspect-ratio: 4/3;
