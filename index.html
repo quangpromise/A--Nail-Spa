@@ -5,11 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A+ Nail Spa — Gainesville, TX</title>
 <meta name="description" content="A+ Nail Spa - Professional Nail & Spa services in Gainesville, TX. Manicure, Pedicure, Gel, Waxing, Massage.">
+<link rel="icon" type="image/jpeg" href="logo.jpg">
+<link rel="apple-touch-icon" href="logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 <link rel="stylesheet" href="css/style.css">
+<script>
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+</script>
 </head>
 <body>
 
@@ -25,6 +32,10 @@
       <a href="#testimonials">Reviews</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <i data-lucide="moon" class="icon-moon"></i>
+      <i data-lucide="sun" class="icon-sun"></i>
+    </button>
     <a href="tel:+19406125346" class="btn btn-primary btn-sm header-cta">Book Now</a>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu">
       <i data-lucide="menu"></i>
