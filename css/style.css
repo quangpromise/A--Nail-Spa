@@ -557,6 +557,8 @@ img { max-width: 100%; display: block; }
 }
 .gallery-track {
   border-radius: 4px;
+  touch-action: pan-y;
+  cursor: grab;
 }
 .gallery-slide {
   display: none;

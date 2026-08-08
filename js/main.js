@@ -57,11 +57,38 @@ if (galleryTrack) {
     galleryNext.disabled = current === total - 1;
   };
 
-  galleryPrev.addEventListener('click', () => {
-    if (current > 0) { current -= 1; updateGallery(); }
-  });
-  galleryNext.addEventListener('click', () => {
-    if (current < total - 1) { current += 1; updateGallery(); }
+  const goPrev = () => { if (current > 0) { current -= 1; updateGallery(); } };
+  const goNext = () => { if (current < total - 1) { current += 1; updateGallery(); } };
+
+  galleryPrev.addEventListener('click', goPrev);
+  galleryNext.addEventListener('click', goNext);
+
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchDragging = false;
+
+  galleryTrack.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    touchDragging = true;
+  }, { passive: true });
+
+  galleryTrack.addEventListener('touchmove', (e) => {
+    if (!touchDragging) return;
+    const dx = e.touches[0].clientX - touchStartX;
+    const dy = e.touches[0].clientY - touchStartY;
+    if (Math.abs(dx) > Math.abs(dy)) e.preventDefault();
+  }, { passive: false });
+
+  galleryTrack.addEventListener('touchend', (e) => {
+    if (!touchDragging) return;
+    touchDragging = false;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    const SWIPE_THRESHOLD = 40;
+    if (Math.abs(dx) > SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy)) {
+      if (dx < 0) goNext(); else goPrev();
+    }
   });
 
   updateGallery();
