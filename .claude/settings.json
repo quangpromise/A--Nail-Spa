@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "(New-Object System.Media.SoundPlayer 'C:\\Windows\\Media\\Ring05.wav').PlaySync()",
+            "statusMessage": "Ringing..."
+          }
+        ]
+      }
+    ]
+  }
+}
